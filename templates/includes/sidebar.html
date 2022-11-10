@@ -1,8 +1,15 @@
-<nav class="sidebar">
-  <ul>
-    <li><a href="{% url 'restaurant:index' %}"></a>Home page</li>
-    <li><a href="{% url 'restaurant:dish-type-list' %}"></a>Dish Types</li>
-    <li><a href="{% url 'restaurant:dish-list' %}"></a>Dishes</li>
-    <li><a href="{% url 'restaurant:cook-list' %}"></a>Cooks</li>
-  </ul>
-</nav>
+<ul class="sidebar-nav list-group">
+  {% if user.is_authenticated %}
+    <li class="list-group-item">User: <a href="{{ user.get_absolute_url }}">{{ user.get_username }}</a></li>
+    <li class="list-group-item"><a href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>
+  {% else %}
+    <li class="list-group-item"><a href="{% url 'login'%}?next={{request.path}}">Login</a></li>
+  {% endif %}
+
+  <br>
+
+  <li class="list-group-item"><a href="{% url 'restaurant:index' %}">Home</a></li>
+  <li class="list-group-item"><a href="{% url 'restaurant:cook-list' %}">All cooks</a></li>
+  <li class="list-group-item"><a href="{% url 'restaurant:dish-list' %}">All dishes</a></li>
+  <li class="list-group-item"><a href="{% url 'restaurant:dish-type-list' %}">All dish types</a></li>
+</ul>
