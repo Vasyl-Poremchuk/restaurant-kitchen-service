@@ -1,0 +1,591 @@
+[
+  {
+    "model": "restaurant.dishtype",
+    "pk": 1,
+    "fields": {
+      "name": "Bread"
+    }
+  },
+  {
+    "model": "restaurant.dishtype",
+    "pk": 2,
+    "fields": {
+      "name": "Cakes"
+    }
+  },
+  {
+    "model": "restaurant.dishtype",
+    "pk": 3,
+    "fields": {
+      "name": "Casseroles and Stews"
+    }
+  },
+  {
+    "model": "restaurant.dishtype",
+    "pk": 4,
+    "fields": {
+      "name": "Curries"
+    }
+  },
+  {
+    "model": "restaurant.dishtype",
+    "pk": 5,
+    "fields": {
+      "name": "Fish cakes"
+    }
+  },
+  {
+    "model": "restaurant.dishtype",
+    "pk": 6,
+    "fields": {
+      "name": "Muffin"
+    }
+  },
+  {
+    "model": "restaurant.dishtype",
+    "pk": 7,
+    "fields": {
+      "name": "Pasta"
+    }
+  },
+  {
+    "model": "restaurant.dishtype",
+    "pk": 8,
+    "fields": {
+      "name": "Savoury"
+    }
+  },
+  {
+    "model": "restaurant.dishtype",
+    "pk": 9,
+    "fields": {
+      "name": "Soups"
+    }
+  },
+  {
+    "model": "restaurant.dishtype",
+    "pk": 10,
+    "fields": {
+      "name": "Souffles"
+    }
+  },
+  {
+    "model": "restaurant.dishtype",
+    "pk": 11,
+    "fields": {
+      "name": "Tarts and Flans"
+    }
+  },
+  {
+    "model": "restaurant.dishtype",
+    "pk": 12,
+    "fields": {
+      "name": "Sunday roast"
+    }
+  },
+  {
+    "model": "restaurant.dishtype",
+    "pk": 13,
+    "fields": {
+      "name": "Summer soup"
+    }
+  },
+  {
+    "model": "restaurant.dishtype",
+    "pk": 14,
+    "fields": {
+      "name": "Stir-fry"
+    }
+  },
+  {
+    "model": "restaurant.cook",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$6uM28XWOFX6ewyloJzjqmt$L+ZhofPylneoaL2iZS4sZu4ZMUNb4oIevfAdzOMn/eE=",
+      "last_login": "2022-08-08T14:14:03Z",
+      "is_superuser": true,
+      "username": "admin.boss",
+      "first_name": "Admin",
+      "last_name": "User",
+      "email": "boss@gmail.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2022-08-08T13:58:29Z",
+      "years_of_experience": 3,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "restaurant.cook",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$73Z1Y57bcoscZ37s9rE9v0$4SEQ0TtXwJKzO5/CRdFSrTifatiPjkZ38gM2H8Kqsdg=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "joyce.byers",
+      "first_name": "Joyce",
+      "last_name": "Byers",
+      "email": "joyce.byers@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-08-08T14:17:04Z",
+      "years_of_experience": 5,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "restaurant.cook",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$QtPol3T7x9quBj4BnbnVwW$UwT4kihkRfSvQEWEeuqVKwMgis2ikKVZfJDBcQMvOKY=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "jim.hopper",
+      "first_name": "Jim",
+      "last_name": "Hopper",
+      "email": "jim.hopper@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-08-08T14:19:09Z",
+      "years_of_experience": 7,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "restaurant.cook",
+    "pk": 4,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$9yU0PLTDKlL02PedUtk2l1$LKjj8O1xGiPGEkDpjsHk87db1iLgt8dgDqECzcsivio",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "jonathan.byers",
+      "first_name": "Jonathan",
+      "last_name": "Byers",
+      "email": "jonathan.byers@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-08-08T14:19:09Z",
+      "years_of_experience": 2,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "restaurant.cook",
+    "pk": 5,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$9yU0PLTDKlL02PedUtk2l1$LKjj8O1xGiPGEkDpjsHk87db1iLgt8dgDqECzcsivio",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "dustin.henderson",
+      "first_name": "Dustin",
+      "last_name": "Henderson",
+      "email": "dustin.henderson@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-08-09T14:19:09Z",
+      "years_of_experience": 9,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "restaurant.cook",
+    "pk": 6,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$9yU0PLTDKlL02PedUtk2l2$LKjj8O1xGiPGEkDpjsHk87db1iLgt8dgDqECzcsivio",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "mike.wheeler",
+      "first_name": "Mike",
+      "last_name": "Wheeler",
+      "email": "mike.wheeler@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-08-09T14:19:09Z",
+      "years_of_experience": 12,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "restaurant.cook",
+    "pk": 7,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$9yU0PLTDKlL02PedUtk2l2$LKjj8O1xGiPGEkDpjsHk87db1iLgt8dgDqECzcsivio",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "lucas.sinclair",
+      "first_name": "Lucas",
+      "last_name": "Sinclair",
+      "email": "lucas.sinclair@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-08-09T14:19:09Z",
+      "years_of_experience": 1,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "restaurant.cook",
+    "pk": 8,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$9yU0PLTDKlL02PedUtk2l2$LKjj8O1xGiPGEkDpjsHk87db1iLgt8dgDqECzcsivio",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "nancy.wheeler",
+      "first_name": "Nancy",
+      "last_name": "Wheeler",
+      "email": "nancy.wheeler@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-08-09T14:19:09Z",
+      "years_of_experience": 15,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "restaurant.cook",
+    "pk": 9,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$9yU0PLTDKlL02PedUtk2l2$LKjj8O1xGiPGEkDpjsHk87db1iLgt8dgDqECzcsivio",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "martin.brenner",
+      "first_name": "Martin",
+      "last_name": "Brenner",
+      "email": "martin.brenner@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-08-09T14:19:09Z",
+      "years_of_experience": 11,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "restaurant.cook",
+    "pk": 10,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$9yU0PLTDKlL02PedUtk2l2$LKjj8O1xGiPGEkDpjsHk87db1iLgt8dgDqECzcsivio",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "billy.hargrove",
+      "first_name": "Billy",
+      "last_name": "Hargrove",
+      "email": "billy.hargrove@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-08-09T14:19:09Z",
+      "years_of_experience": 15,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "restaurant.cook",
+    "pk": 11,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$9yU0PLTDKlL02PedUtk2l2$LKjj8O1xGiPGEkDpjsHk87db1iLgt8dgDqECzcsivio",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "bob.newby",
+      "first_name": "Bob",
+      "last_name": "Newby",
+      "email": "bob.newby@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-08-09T14:19:09Z",
+      "years_of_experience": 3,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "restaurant.dish",
+    "pk": 1,
+    "fields": {
+      "name": "CHOCOLATE BREAD AND BUTTER PUDDING",
+      "description": "It is quite simply one of the most brilliant hot puddings ever invented. It's so simple but so good – and even better prepared two days in advance. Serve in small portions because it is very rich. Though I doubt if there will be any left over, it's also wonderful cold.",
+      "price": 50.50,
+      "dish_type": 1,
+      "cooks": [
+        3
+      ]
+    }
+  },
+  {
+    "model": "restaurant.dish",
+    "pk": 2,
+    "fields": {
+      "name": "CORNMEAL AND MIXED-SEED BREAD",
+      "description": "This is a very quick and easy loaf, but with lots of varying textures. And don't worry if the sunflower seeds turn green during baking – it actually looks very attractive.",
+      "price": 45.00,
+      "dish_type": 1,
+      "cooks": [
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "model": "restaurant.dish",
+    "pk": 3,
+    "fields": {
+      "name": "AUSTRIAN COFFEE AND WALNUT CAKE WITH COFFEE CREAM",
+      "description": "This is unashamedly rich and luscious. Firstly, coffee and walnuts have a great affinity; secondly, so do coffee and creaminess; and thirdly, because the cake is soaked in coffee syrup, it's also meltingly moist.",
+      "price": 60.00,
+      "dish_type": 2,
+      "cooks": [
+        1,
+        2,
+        5
+      ]
+    }
+  },
+  {
+    "model": "restaurant.dish",
+    "pk": 4,
+    "fields": {
+      "name": "CHOCOLATE SOURED CREAM CAKE",
+      "description": "This is for people who don’t like things too sweet but, that said, if you do, add a tablespoon of sugar to the filling.",
+      "price": 72.50,
+      "dish_type": 2,
+      "cooks": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "restaurant.dish",
+    "pk": 5,
+    "fields": {
+      "name": "A BIT OF THE IRISH STEW WITH CRUSTED DUMPLINGS",
+      "description": "Irish Stew is one of the best casserole dishes in the entire world. If you top it with dumplings, then bake it in the oven so that they turn crusty and crunchy, you will have a heavenly banquet on your plate. Serve it as the Irish do, with simple boiled cabbage.",
+      "price": 120.00,
+      "dish_type": 3,
+      "cooks": [
+        11
+      ]
+    }
+  },
+  {
+    "model": "restaurant.dish",
+    "pk": 6,
+    "fields": {
+      "name": "CHICKEN WITH WHOLE SPICES",
+      "description": "This tastes authentically Indian, but with an added 'home-made' freshness that is so often lacking in Indian restaurants.",
+      "price": 90.50,
+      "dish_type": 4,
+      "cooks": [
+        4
+      ]
+    }
+  },
+  {
+    "model": "restaurant.dish",
+    "pk": 7,
+    "fields": {
+      "name": "ENGLISH COLONIAL CURRY WITH TURKEY",
+      "description": "There is something about an uncomplicated, old-fashioned curry-powder curry after all the Christmas feasting. Its sheer simplicity offers a much-needed change of gear. It is also equally good made with leftover chicken or beef.",
+      "price": 110.00,
+      "dish_type": 4,
+      "cooks": [
+        5
+      ]
+    }
+  },
+  {
+    "model": "restaurant.dish",
+    "pk": 8,
+    "fields": {
+      "name": "SALMON FISHCAKES WITH CUCUMBER AND DILL SAUCE",
+      "description": "Back in fashion again after years in the wilderness, fishcakes can be found in the classiest restaurants – but taste even better if you make them yourself. This recipe combines red salmon with creamy mashed potato in a crisp coating, with a light summery sauce.",
+      "price": 143.00,
+      "dish_type": 5,
+      "cooks": [
+        7
+      ]
+    }
+  },
+  {
+    "model": "restaurant.dish",
+    "pk": 9,
+    "fields": {
+      "name": "CHOCOLATE DROP MINI MUFFINS WITH RED NOSES",
+      "description": "Tiny little chocolate bites - soft, light, with melted chocolate swirled on the top, on which to fix a whole cherry.",
+      "price": 68.50,
+      "dish_type": 6,
+      "cooks": [
+        9
+      ]
+    }
+  },
+  {
+    "model": "restaurant.dish",
+    "pk": 10,
+    "fields": {
+      "name": "ENGLISH MUFFINS",
+      "description": "Now here's a neglected delicacy – real old-fashioned muffins. They're very welcoming served for tea on a chilly day.",
+      "price": 57.00,
+      "dish_type": 6,
+      "cooks": [
+        8
+      ]
+    }
+  },
+  {
+    "model": "restaurant.dish",
+    "pk": 11,
+    "fields": {
+      "name": "LINGUINE WITH GORGONZOLA, PANCETTA AND WILTED ROCKET",
+      "description": "This is a lovely combination of assertive flavours that harmonise together perfectly.",
+      "price": 95.50,
+      "dish_type": 7,
+      "cooks": [
+        7,
+        3
+      ]
+    }
+  },
+  {
+    "model": "restaurant.dish",
+    "pk": 12,
+    "fields": {
+      "name": "MEXICAN ENCHILADAS WITH CHEESE",
+      "description": "Well, they're Mexican wheat-flour pancakes that can be spread with some spicy salsa and stuffed with almost anything you have handy – in this case cheese – and then baked. An excellent light lunch dish served with a salad.",
+      "price": 88.50,
+      "dish_type": 8,
+      "cooks": [
+        6
+      ]
+    }
+  },
+  {
+    "model": "restaurant.dish",
+    "pk": 13,
+    "fields": {
+      "name": "CHRISTMAS EVE HOT SMOKED SALMON PIE",
+      "description": "This would be a good choice for Christmas Eve supper – done and dusted in the morning, or even the day before, then just whisked out of the fridge and into the oven. Fresh, shelled, imported peas involve no work and make an excellent accompaniment, as does stem broccoli with a generous sprinkling of Parmesan.",
+      "price": 102.50,
+      "dish_type": 8,
+      "cooks": [
+        11,
+        7
+      ]
+    }
+  },
+  {
+    "model": "restaurant.dish",
+    "pk": 14,
+    "fields": {
+      "name": "A SUMMER SOUP OF LETTUCE, CUCUMBER AND PEAS",
+      "description": "An excess of home-grown cucumbers and what to do with them forth a delightful fresh, green summer soup, which we enjoy served hot during a chillier snap, but it's equally good served ice cold.",
+      "price": 70.00,
+      "dish_type": 9,
+      "cooks": [
+        10
+      ]
+    }
+  },
+  {
+    "model": "restaurant.dish",
+    "pk": 15,
+    "fields": {
+      "name": "CHOCOLATE SOUFFLE CAKE WITH ARMAGNAC PRUNES AND CRÈME FRAICHE SAUCE",
+      "description": "It’s dark, very moist, and the prunes soaked in Armagnac make it a very grown-up chocolate experience.",
+      "price": 83.00,
+      "dish_type": 10,
+      "cooks": [
+        9
+      ]
+    }
+  },
+  {
+    "model": "restaurant.dish",
+    "pk": 16,
+    "fields": {
+      "name": "GOOSEBERRY CREME FRAICHE TART",
+      "description": "This has to be one of the easiest fruit tarts to make in the world. The filling is essentially gooseberries and custard set in a pastry crust.",
+      "price": 63.50,
+      "dish_type": 11,
+      "cooks": [
+        4
+      ]
+    }
+  },
+  {
+    "model": "restaurant.dish",
+    "pk": 17,
+    "fields": {
+      "name": "LATTICE MINCEMEAT DESSERT TART",
+      "description": "Here is another festive dessert that makes good use of home-made mincemeat. Serve it fairly warm, with Cumberland Rum Butter to melt through the lattice.",
+      "price": 58.00,
+      "dish_type": 11,
+      "cooks": [
+        9,
+        3
+      ]
+    }
+  },
+  {
+    "model": "restaurant.dish",
+    "pk": 18,
+    "fields": {
+      "name": "AUTUMN LAMB BRAISED IN BEAUJOLAIS",
+      "description": "This is certainly one of the best ways to cook lamb in the autumn or winter months – slowly braising it under a tent of foil keeps it beautifully moist and really seems to develop its full flavour. Adding the root vegetables to cook in the braising juices is also very convenient and makes this an easy main course for entertaining.",
+      "price": 140.00,
+      "dish_type": 12,
+      "cooks": [
+        1
+      ]
+    }
+  },
+  {
+    "model": "restaurant.dish",
+    "pk": 19,
+    "fields": {
+      "name": "COURGETTE SOUP WITH WATERCRESS AND PECORINO PESTO",
+      "description": "This light summer soup is perfect for late summer when courgettes are cheap and plentiful.",
+      "price": 68.50,
+      "dish_type": 13,
+      "cooks": [
+        4,
+        11
+      ]
+    }
+  },
+  {
+    "model": "restaurant.dish",
+    "pk": 20,
+    "fields": {
+      "name": "CHINESE CRISPY BEEF STIR-FRY",
+      "description": "The good thing about Chinese cooking is that it always manages to make a little meat go a long way.",
+      "price": 92.50,
+      "dish_type": 14,
+      "cooks": [
+        2,
+        5,
+        8
+      ]
+    }
+  },
+  {
+    "model": "restaurant.dish",
+    "pk": 21,
+    "fields": {
+      "name": "QUICK STIR-FRIED SPICED RED CABBAGE WITH APPLES",
+      "description": "Red cabbage is wonderfully versatile – you can cook it long and slow and it seems to go on improving, or in the recipe below the opposite: fast cooking to retain some crunchiness and bite.\n\nEither way the apples and spices are essential. If you want to make this in advance it's one vegetable that doesn't mind being re-heated.",
+      "price": 95.00,
+      "dish_type": 14,
+      "cooks": [
+        10
+      ]
+    }
+  }
+]
