@@ -20,12 +20,12 @@ urlpatterns = [
         name="dish-detail",
     ),
     path(
-        "cookers/",
+        "cooks/",
         CookListView.as_view(),
         name="cook-list",
     ),
     path(
-        "cookers/<int:pk>",
+        "cooks/<int:pk>",
         CookDetailView.as_view(),
         name="cook-detail",
     ),
