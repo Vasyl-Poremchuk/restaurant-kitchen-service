@@ -5,12 +5,12 @@ from restaurant.models import Cook, DishType, Dish
 
 
 def index(request):
-    num_cookers = Cook.objects.count()
+    num_cooks = Cook.objects.count()
     num_dish_types = DishType.objects.count()
     num_dishes = Dish.objects.count()
 
     context = {
-        "num_cookers": num_cookers,
+        "num_cooks": num_cooks,
         "num_dish_types": num_dish_types,
         "num_dishes": num_dishes,
     }
