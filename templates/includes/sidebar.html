@@ -1,8 +1,8 @@
 <nav class="sidebar">
   <ul>
     <li><a href="{% url 'restaurant:index' %}"></a>Home page</li>
-    <li><a href="#"></a>Dish Types</li>
-    <li><a href="#"></a>Dishes</li>
-    <li><a href="#"></a>Cookers</li>
+    <li><a href="{% url 'restaurant:dish-type-list' %}"></a>Dish Types</li>
+    <li><a href="{% url 'restaurant:dish-list' %}"></a>Dishes</li>
+    <li><a href="{% url 'restaurant:cook-list' %}"></a>Cooks</li>
   </ul>
 </nav>
