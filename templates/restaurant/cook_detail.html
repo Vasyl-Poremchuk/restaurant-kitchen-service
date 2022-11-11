@@ -6,23 +6,46 @@
     <a href="{% url 'restaurant:cook-update' pk=cook.id %}" class="btn btn-primary">Update years of experience</a>
     <a href="{% url 'restaurant:cook-delete' pk=cook.id %}" class="btn btn-danger">Delete cook</a>
   </h1>
+  <table class="table">
+    <thead class="thead-dark">
+    <tr>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Years Of Experience</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>{{ cook.first_name }}</td>
+      <td>{{ cook.last_name }}</td>
+      <td>{{ cook.years_of_experience }}</td>
+    </tr>
+    </tbody>
+  </table>
 
-  <p><strong>First name:</strong> {{ cook.first_name }}</p>
-  <p><strong>Last name:</strong> {{ cook.last_name }}</p>
-  <p><strong>Years of experience:</strong> {{ cook.years_of_experience }}</p>
-  <p><strong>Is staff:</strong> {{ cook.is_staff }}</p>
+  <div>
+    <h4 style="color: white">Dishes</h4>
+    <table class="table">
+      <thead class="thead-dark">
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Dish Type</th>
+      </tr>
+      </thead>
 
-  <div class="ml-3">
-    <h4>Dishes</h4>
 
-    {% for dish in cook.dishes.all %}
-      <hr>
-      <p><strong>Name:</strong> {{ dish.name }}</p>
-      <p><strong>Dish Type:</strong> {{ dish.dish_type.name }}</p>
-      <p class="text-muted"><strong>Id:</strong> {{ dish.id }}</p>
+      {% for dish in cook.dishes.all %}
+        <tr>
+          <td>{{ dish.id }}</td>
+          <td>{{ dish.name }}</td>
+          <td>{{ dish.dish_type.name }}</td>
+        </tr>
 
-    {% empty %}
-      <p>No dishes!</p>
-    {% endfor %}
+      {% empty %}
+        <p>No dishes!</p>
+      {% endfor %}
+    </table>
   </div>
+
 {% endblock %}
