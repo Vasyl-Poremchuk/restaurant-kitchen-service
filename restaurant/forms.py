@@ -1,6 +1,7 @@
 from django import forms
 from django.contrib.auth import get_user_model
 from django.contrib.auth.forms import UserCreationForm
+from django.core.validators import MaxValueValidator
 
 from restaurant.models import Cook, Dish
 
@@ -14,6 +15,14 @@ class CookCreationForm(UserCreationForm):
 
 
 class CookYearsOfExperienceUpdateForm(forms.ModelForm):
+    years_of_experience = forms.CharField(
+        validators=[
+            MaxValueValidator(
+                "50", message="Sorry, but you need to retire 😆"
+            )
+        ]
+    )
+
     class Meta:
         model = Cook
         fields = ("years_of_experience",)
