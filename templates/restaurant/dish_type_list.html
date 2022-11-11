@@ -10,12 +10,14 @@
 
   {% if dish_type_list %}
     <table class="table">
+    <thead class="thead-dark">
       <tr>
         <th>ID</th>
         <th>Name</th>
         <th>Update</th>
         <th>Delete</th>
       </tr>
+    </thead>
 
       {% for type in dish_type_list %}
         <tr>

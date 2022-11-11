@@ -1,3 +1,34 @@
 body {
     margin-top: 20px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 16px;
+}
+
+.content {
+    background-color: lightgray;
+    width: 800px;
+    text-align: center;
+    margin-left: 100px;
+}
+
+.bg {
+    background: url("https://mdbcdn.b-cdn.net/img/new/slides/026.webp") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.list-group-item {
+    background-color: lightgray;
+}
+
+tr {
+    background-color: lightgray;
+}
+
+h1 {
+    color: white;
+}
+
+
+label {
+    color: #007bff;
 }
