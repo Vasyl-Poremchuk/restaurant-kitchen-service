@@ -11,7 +11,8 @@
       Update
     </a>
   </h1>
-  <p>Dish Type: ({{ dish.dish_type.name }})</p>
+  <p>Dish Type: {{ dish.dish_type.name }}</p>
+  <p>Dish Description: {{ dish.description }}</p>
   <h1>
     Cooks
     {% if dish in user.dishes.all %}
