@@ -1,15 +1,16 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <h1>Restaurant Kitchen Service</h1>
-  <p>Welcome to the Restaurant Kitchen Service!</p>
-  <h3>Restaurant kitchen service indicators:</h3>
-  <ul>
-    <li>Number of dishes: {{ num_dishes }}.</li>
-    <li>Number of cooks: {{ num_cooks }}.</li>
-    <li>Number of dish types: {{ num_dish_types }}.</li>
-  </ul>
-  <p>You have visited this page
-    {{ num_visits }} time{{ num_visits|pluralize }}.
-  </p>
+  <div class="content">
+    <h1 style="background-color: #343a40">Restaurant Kitchen Home</h1>
+    <p>Welcome to the Restaurant Kitchen Service!</p>
+    <h3>Dynamic content</h3>
+      <p><strong>Dishes - {{ num_dishes }}</strong></p>
+      <p><strong>Cooks - {{ num_cooks }}</strong></p>
+      <p><strong>Dish Types - {{ num_dish_types }}</strong></p>
+    <p>You have visited this page
+      <strong>{{ num_visits }}</strong> time{{ num_visits|pluralize }}
+    </p>
+  </div>
+
 {% endblock %}
