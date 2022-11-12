@@ -1,6 +1,12 @@
+from http.client import HTTPResponse
+from typing import Any
+
 from django.contrib.auth import get_user_model
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.core.handlers.wsgi import WSGIRequest
+from django.db.models import QuerySet
+from django.http import HttpResponsePermanentRedirect, HttpResponseRedirect
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views import generic
@@ -14,7 +20,7 @@ from restaurant.models import Cook, DishType, Dish
 
 
 @login_required
-def index(request):
+def index(request) -> HTTPResponse:
     num_cooks = Cook.objects.count()
     num_dish_types = DishType.objects.count()
     num_dishes = Dish.objects.count()
@@ -29,7 +35,10 @@ def index(request):
         "num_visits": num_visits + 1,
     }
 
-    return render(request, template_name="restaurant/index.html", context=context)
+    return render(
+        request, template_name="restaurant/index.html",
+        context=context,
+    )
 
 
 class DishTypeListView(LoginRequiredMixin, generic.ListView):
@@ -39,7 +48,9 @@ class DishTypeListView(LoginRequiredMixin, generic.ListView):
     queryset = DishType.objects.all()
     paginate_by = 5
 
-    def get_context_data(self, *, object_list=None, **kwargs):
+    def get_context_data(
+            self, *, object_list: Any = None, **kwargs: Any
+    ) -> dict[str, Any]:
         context = super(DishTypeListView, self).get_context_data(**kwargs)
         name = self.request.GET.get("name", "")
         context["search_form"] = DishTypeSearchForm(
@@ -50,7 +61,7 @@ class DishTypeListView(LoginRequiredMixin, generic.ListView):
 
         return context
 
-    def get_queryset(self):
+    def get_queryset(self) -> QuerySet[DishType]:
         form = DishTypeSearchForm(self.request.GET)
 
         if form.is_valid():
@@ -89,7 +100,9 @@ class DishListView(LoginRequiredMixin, generic.ListView):
     queryset = Dish.objects.select_related("dish_type")
     paginate_by = 5
 
-    def get_context_data(self, *, object_list=None, **kwargs):
+    def get_context_data(
+            self, *, object_list: Any = None, **kwargs: Any
+    ) -> dict[str, Any]:
         context = super(DishListView, self).get_context_data(**kwargs)
         name = self.request.GET.get("name", "")
         context["search_form"] = DishSearchForm(
@@ -100,7 +113,7 @@ class DishListView(LoginRequiredMixin, generic.ListView):
 
         return context
 
-    def get_queryset(self):
+    def get_queryset(self) -> QuerySet[Dish]:
         form = DishSearchForm(self.request.GET)
 
         if form.is_valid():
@@ -137,7 +150,9 @@ class CookListView(LoginRequiredMixin, generic.ListView):
     paginate_by = 5
     queryset = get_user_model().objects.all()
 
-    def get_context_data(self, *, object_list=None, **kwargs):
+    def get_context_data(
+            self, *, object_list: Any = None, **kwargs: Any
+    ) -> dict[str, Any]:
         context = super(CookListView, self).get_context_data(**kwargs)
         username = self.request.GET.get("username", "")
         context["search_form"] = CookSearchForm(
@@ -148,7 +163,7 @@ class CookListView(LoginRequiredMixin, generic.ListView):
 
         return context
 
-    def get_queryset(self):
+    def get_queryset(self) -> QuerySet[Cook]:
         form = CookSearchForm(self.request.GET)
 
         if form.is_valid():
@@ -181,7 +196,9 @@ class CookDeleteView(LoginRequiredMixin, generic.DeleteView):
 
 
 @login_required
-def assign_driver(request, pk):
+def assign_driver(
+        request: WSGIRequest, pk: Any
+) -> HttpResponsePermanentRedirect | HttpResponseRedirect:
     driver = Cook.objects.get(id=request.user.id)
     if Dish.objects.get(id=pk) in driver.cars.all():
         driver.cars.remove(pk)
