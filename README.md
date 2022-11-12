@@ -16,7 +16,6 @@ cd restaurant-kitchen-service
 python -m venv venv
 venv\Scripts\activate
 pip install -r requirenments.txt
-python manage.py loaddata restaurant_kitchen_service_db_data.json
 python manage.py runserver
 ```
 
