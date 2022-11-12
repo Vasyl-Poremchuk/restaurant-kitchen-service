@@ -10,12 +10,12 @@ DISH_LIST_URL = reverse("restaurant:dish-list")
 
 
 class PublicDishTypeTest(TestCase):
-    def test_login_required_list(self):
+    def test_login_required_list(self) -> None:
         response = self.client.get(DISH_TYPE_LIST_URL)
 
         self.assertNotEqual(response.status_code, 200)
 
-    def test_login_required_create(self):
+    def test_login_required_create(self) -> None:
         response = self.client.get(DISH_TYPE_CREATE_URL)
 
         self.assertNotEqual(response.status_code, 200)
@@ -31,7 +31,7 @@ class PrivateDishTypeTests(TestCase):
         )
         self.client.force_login(self.cook)
 
-    def test_retrieve_dish_types(self):
+    def test_retrieve_dish_types(self) -> None:
         DishType.objects.create(
             name="Pastry",
         )
@@ -47,26 +47,32 @@ class PrivateDishTypeTests(TestCase):
             list(response.context["dish_type_list"]),
             list(dish_types),
         )
-        self.assertTemplateUsed(response, "restaurant/dish_type_list.html")
+        self.assertTemplateUsed(
+            response, "restaurant/dish_type_list.html",
+        )
 
-    def test_login_required_update(self):
+    def test_login_required_update(self) -> None:
         dish_type = DishType.objects.create(
             name="Soups",
         )
-        dish_type_update_url = reverse("restaurant:dish-type-update", args=[dish_type.pk])
+        dish_type_update_url = reverse(
+            "restaurant:dish-type-update", args=[dish_type.pk],
+        )
         response = self.client.post(dish_type_update_url)
         self.assertEqual(response.status_code, 200)
 
-    def test_login_required_deleted(self):
+    def test_login_required_deleted(self) -> None:
         DishType.objects.create(
             name="Souffles",
         )
-        dish_type_delete_url = reverse("restaurant:dish-type-list")
+        dish_type_delete_url = reverse(
+            "restaurant:dish-type-list",
+        )
         response = self.client.post(dish_type_delete_url)
 
         self.assertEqual(response.status_code, 405)
 
-    def test_dish_type_search(self):
+    def test_dish_type_search(self) -> None:
         search_form = "Tarts and Flans"
         dish_type_search = DishType.objects.create(
             name=search_form,
@@ -84,7 +90,9 @@ class PrivateDishTypeTests(TestCase):
             f"{DISH_TYPE_LIST_URL}?name={search_form}"
         )
 
-        self.assertEqual(response.context["dish_type_list"].count(), 1)
+        self.assertEqual(
+            response.context["dish_type_list"].count(), 1,
+        )
         self.assertEqual(
             response.context["dish_type_list"][0],
             dish_type_search,
@@ -99,7 +107,7 @@ class PrivateCookTests(TestCase):
         )
         self.client.force_login(self.user)
 
-    def test_create_cook(self):
+    def test_create_cook(self) -> None:
         form_data = {
             "username": "kobe.bryant",
             "password1": "kobecook123",
@@ -108,8 +116,12 @@ class PrivateCookTests(TestCase):
             "first_name": "Kobe",
             "last_name": "Bryant",
         }
-        self.client.post(reverse("restaurant:cook-create"), data=form_data)
-        response = self.client.get(reverse("restaurant:cook-list"))
+        self.client.post(reverse(
+            "restaurant:cook-create"), data=form_data,
+        )
+        response = self.client.get(
+            reverse("restaurant:cook-list"),
+        )
         new_cook = get_user_model().objects.get(
             username=form_data["username"],
         )
@@ -132,7 +144,7 @@ class PrivateDishTests(TestCase):
         )
         self.client.force_login(self.cook)
 
-    def test_retrieve_dishes(self):
+    def test_retrieve_dishes(self) -> None:
         dish_type = DishType.objects.create(
             name="Pastry",
         )
@@ -153,9 +165,11 @@ class PrivateDishTests(TestCase):
             list(response.context["dish_list"]),
             list(dishes),
         )
-        self.assertTemplateUsed(response, "restaurant/dish_list.html")
+        self.assertTemplateUsed(
+            response, "restaurant/dish_list.html",
+        )
 
-    def test_login_required_update(self):
+    def test_login_required_update(self) -> None:
         dish_type = DishType.objects.create(
             name="Pastry",
         )
@@ -169,11 +183,13 @@ class PrivateDishTests(TestCase):
             price=80.0,
             dish_type=dish_type
         )
-        dish_update_url = reverse("restaurant:dish-update", args=[dish.pk])
+        dish_update_url = reverse(
+            "restaurant:dish-update", args=[dish.pk],
+        )
         response = self.client.post(dish_update_url)
         self.assertEqual(response.status_code, 200)
 
-    def test_login_required_deleted(self):
+    def test_login_required_deleted(self) -> None:
         dish_type = DishType.objects.create(
             name="Pastry",
         )
@@ -190,7 +206,7 @@ class PrivateDishTests(TestCase):
 
         self.assertEqual(response.status_code, 405)
 
-    def test_dish_search(self):
+    def test_dish_search(self) -> None:
         dish_type = DishType.objects.create(
             name="Dishes",
         )
@@ -242,7 +258,9 @@ class PrivateDishTests(TestCase):
             f"{DISH_LIST_URL}?name={search_form}"
         )
 
-        self.assertEqual(response.context["dish_list"].count(), 1)
+        self.assertEqual(
+            response.context["dish_list"].count(), 1,
+        )
         self.assertEqual(
             response.context["dish_list"][0],
             dish_search,
