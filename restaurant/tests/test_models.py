@@ -5,7 +5,7 @@ from restaurant.models import DishType, Dish
 
 
 class ModelsTests(TestCase):
-    def test_dish_type_str(self):
+    def test_dish_type_str(self) -> None:
         dish_type = DishType.objects.create(
             name="Jellies",
         )
@@ -15,7 +15,7 @@ class ModelsTests(TestCase):
             dish_type.name,
         )
 
-    def test_cook_str(self):
+    def test_cook_str(self) -> None:
         cook = get_user_model().objects.create_user(
             username="bob.beamon",
             password="supercook123",
@@ -28,7 +28,7 @@ class ModelsTests(TestCase):
             f"{cook.username} ({cook.first_name} {cook.last_name})",
         )
 
-    def test_dish_str(self):
+    def test_dish_str(self) -> None:
         dish_type = DishType.objects.create(
             name="Leftovers",
         )
@@ -43,7 +43,7 @@ class ModelsTests(TestCase):
 
         self.assertEqual(str(dish), dish.name)
 
-    def test_create_cook_with_years_of_experience(self):
+    def test_create_cook_with_years_of_experience(self) -> None:
         username = "michael.jordan"
         password = "dude112345"
         years_of_experience = 7
@@ -56,9 +56,11 @@ class ModelsTests(TestCase):
 
         self.assertEqual(cook.username, username)
         self.assertTrue(cook.check_password(password))
-        self.assertEqual(cook.years_of_experience, years_of_experience)
+        self.assertEqual(
+            cook.years_of_experience, years_of_experience,
+        )
 
-    def test_cook_get_absolute_url(self):
+    def test_cook_get_absolute_url(self) -> None:
         cook = get_user_model().objects.create_user(
             username="michael.phelps",
             password="supercook123",
