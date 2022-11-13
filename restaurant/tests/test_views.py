@@ -62,15 +62,16 @@ class PrivateDishTypeTests(TestCase):
         self.assertEqual(response.status_code, 200)
 
     def test_login_required_deleted(self) -> None:
-        DishType.objects.create(
+        dish_type = DishType.objects.create(
             name="Souffles",
         )
         dish_type_delete_url = reverse(
-            "restaurant:dish-type-list",
+            "restaurant:dish-type-delete",
+            args=[dish_type.pk],
         )
         response = self.client.post(dish_type_delete_url)
 
-        self.assertEqual(response.status_code, 405)
+        self.assertEqual(response.status_code, 302)
 
     def test_dish_type_search(self) -> None:
         search_form = "Tarts and Flans"
