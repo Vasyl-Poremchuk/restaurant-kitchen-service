@@ -4,6 +4,13 @@ Project about the organization of the creation and preparation of dishes by the 
 
 ## Check it out!
 
+Use the following data to access the resource:
+
+```shell
+Username: bradley
+Password: bestcook123
+```
+
 [Restaurant project deployed to Render](https://restaurant-kitchen-service-upcm.onrender.com)
 
 ## Installation
