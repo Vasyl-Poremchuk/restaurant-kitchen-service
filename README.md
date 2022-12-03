@@ -34,4 +34,4 @@ python manage.py runserver
 
 ## Demo
 
-![Website Interface](D:\restaurant_kitchen_service\demo.png)
+![Website Interface](demo.png)
