@@ -2,6 +2,7 @@
 
 {% block content %}
   <h1>
+    Dish details
     {{ dish.model }}
     <a href="{% url 'restaurant:dish-delete' pk=dish.id %}" class="btn btn-danger link-to-page">
       Delete

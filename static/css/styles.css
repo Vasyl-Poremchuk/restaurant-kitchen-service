@@ -12,8 +12,12 @@ body {
 }
 
 .bg {
-    background: url("https://mdbcdn.b-cdn.net/img/new/slides/026.webp") no-repeat center center fixed;
+    background-image: url("https://mdbcdn.b-cdn.net/img/new/slides/026.webp");
+    background-position: center center;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    filter: drop-shadow(8px 8px 10px black);
 }
 
 .list-group-item {
@@ -30,5 +34,6 @@ h1 {
 
 
 label {
-    color: #007bff;
+    color: white;
+    text-shadow: 0 0 3px black;
 }

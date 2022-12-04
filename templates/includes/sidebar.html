@@ -1,9 +1,13 @@
 <ul class="sidebar-nav list-group">
   {% if user.is_authenticated %}
-    <li class="list-group-item" style="background-color: #343a40; color: #007bff">User: <a href="{{ user.get_absolute_url }}">{{ user.get_username }}</a></li>
+    <li class="list-group-item" style="background-color: #343a40; color: #007bff">User: <a href="{{ user.get_absolute_url }}">{{ user.get_username }}</a>
+      <img style="width: 50px; float: right; border-radius: 5px" src="/static/favicon/favicon.png" alt="restaurant-kitchen-service">
+    </li>
     <li class="list-group-item"><a href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>
   {% else %}
-    <li class="list-group-item" style="background-color: #343a40"><a href="{% url 'login'%}?next={{request.path}}">Login</a></li>
+    <li class="list-group-item" style="background-color: #343a40"><a href="{% url 'login'%}?next={{request.path}}">Login</a>
+      <img style="width: 50px; float: right; border-radius: 5px" src="/static/favicon/favicon.png" alt="restaurant-kitchen-service">
+    </li>
   {% endif %}
 
   <br>
